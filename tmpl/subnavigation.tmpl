@@ -1,0 +1,49 @@
+<?js
+ var data = obj || {} ;
+ var self =  this ;
+?>
+<nav>
+    <ul>
+                    
+        <?js if (data.members && data.members.length && data.members.forEach) { ?>
+            <li>Members
+                <ul>
+                <?js data.members.forEach(function(m) { ?>
+                    <li><?js= self.linkto(m.longname,m.name) ?></li>    
+                <?js }); ?>
+                <ul>
+            </li>
+        <?js } ?>
+        
+        <?js if (data.methods && data.methods.length && data.methods.forEach) { ?>
+            <li>Methods
+                <ul>
+                <?js data.methods.forEach(function(m) { ?>
+                    <li><?js= self.linkto(m.longname,m.name) ?></li> 
+                <?js }); ?>
+                </ul>
+            </li>
+        <?js } ?>
+        
+        <?js if (data.events && data.events.length && data.events.forEach) { ?>
+            <li>Events
+                <ul>
+                <?js data.events.forEach(function(m) { ?>
+                    <li><?js= self.linkto(m.longname,m.name) ?></li> 
+                <?js }); ?>
+                </ul>
+            </li>
+        <?js } ?>
+        
+        <?js if (data.typedefs && data.typedefs.length && data.typedefs.forEach) { ?>
+            <li>Type definitions
+                <ul>
+                <?js data.typedefs.forEach(function(m) { ?>
+                    <li><?js= self.linkto(m.longname,m.name) ?></li> 
+                <?js }); ?>
+                </ul>
+            </li>
+        <?js } ?>
+    
+    </ul>
+</nav>

@@ -1,0 +1,26 @@
+<?js
+var returns = obj || {};
+?>
+
+<div class="return">
+    <h4>Return</h4>
+    <table>
+    
+    
+            <tr>
+            
+                <?js if (returns.type && returns.type.names) { ?>
+                    <td class="type">
+                        <?js= this.partial('type.tmpl',returns.type.names) ?>
+                    </td>
+                <?js } ?>
+                
+                <?js if (returns.description) { ?>
+                    <td class="description"><?js= returns.description ?></td>
+                <?js } ?>
+                
+            </tr>
+        
+        
+    </table>
+</div>

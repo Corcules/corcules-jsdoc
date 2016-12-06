@@ -1,0 +1,51 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc"
+    ]
+  },
+  "templates": {
+    "menu": {
+      "defaultsortby": "longname, version, since",
+      "modules": {
+        "show": true
+      },
+      "namespaces": {
+        "show": true,
+        "showchildren": true,
+        "sortby": "kind"
+      },
+      "classes": {
+        "show": true,
+        "showchildren": true,
+        "sortby": "kind"
+      },
+      "globals": {
+        "show": true,
+        "sortby": "kind"
+      },
+      "events": {
+        "show": true,
+        "sortby": "",
+        "filtermodule": true
+      },
+      "mixins": {
+        "show": true
+      },
+      "interfaces": {
+        "show": true
+      },
+      "tutorials": {
+        "show": true
+      },
+      "externals": {
+        "show": true
+      }
+    }
+  },
+  "opts": {
+    "template": "./corcules",
+    "encoding": "utf8"
+  }
+}

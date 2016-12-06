@@ -1,0 +1,93 @@
+<?js
+var data = obj;
+var self = this;
+?>
+
+
+<article class="doclet" id="<?js= id ?>">
+
+    <?js if (data.kind !== 'module') { ?>
+        
+        
+    <?js } ?>
+
+
+    <h3><?js= name + (data.signature || '') ?></h3>
+    
+
+    
+    <?js if (data.meta && self.outputSourceFiles) {?>
+        <div class="location">
+            <a href="#" class="name"><?js= self.linkto(meta.shortpath) ?></a>, 
+            <a href="#" class="line"><?js= self.linkto(meta.shortpath, 'line ' + meta.lineno, null, 'line' + meta.lineno) ?></a>
+        </div>
+    <?js } ?>
+
+
+    
+    <?js if (data.deprecated) { ?>
+        <div class="deprecated">
+            <?js if (data.deprecated === true) { ?>
+                Deprecated
+            <?js } else { ?>
+                Deprecated : <?js= data.deprecated ?>
+            <?js } ?> 
+        </div> 
+    <?js } ?> 
+    
+    
+    
+    
+    <?js if (data.summary) { ?>
+        <div class="summary">
+            <?js= summary ?>
+        </div>
+    <?js } ?>
+    
+    
+    
+    <?js if (data.todo && todo.length) {?>
+        <div class="todo">
+            <b>Todo</b>
+            <ul>
+                <?js todo.forEach(function(t) { ?>
+                    <li><?js= t ?></li>
+                <?js }); ?>                  
+            </ul>
+        </div>
+    <?js } ?>
+    
+    
+    
+    <?js if (data.params && params.length) { ?>
+        <?js= this.partial('params.tmpl', params) ?>
+    <?js } ?>
+   
+   
+   
+    <?js if (data.returns && returns.length) { ?>
+        <?js= self.partial('returns.tmpl', returns ) ?>
+    <?js } ?>
+   
+   
+   
+   
+    <?js if (data.kind !== 'module' && data.description) { ?>
+        <div class="description">
+            <?js= data.description ?>
+        </div>
+    <?js } ?>
+    
+    
+    
+    <?js if (data.examples && examples.length) { ?>
+        <?js= this.partial('examples.tmpl', examples) ?>
+    <?js } ?>
+    
+    
+    
+    <?js= this.partial('details.tmpl', data) ?>
+    
+    
+
+</article>

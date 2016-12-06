@@ -1,0 +1,98 @@
+<?js
+var data = obj;
+var self = this;
+?>
+
+
+
+
+<?js var properties = data.properties; ?>
+<?js if (properties && properties.length && properties.forEach) { ?>
+    <?js= this.partial('properties.tmpl', data) ?>
+<?js } ?>
+
+
+
+<?js if (data.see && see.length) {?>
+<div class="see">
+    <h4>See</h4>
+    <ul>
+        <?js see.forEach(function(s) { ?>
+            <li><?js= self.linkto(s) ?></li>
+        <?js }); ?>
+    </ul>
+</div>
+<?js } ?>
+
+
+
+
+
+
+<?js if (data.tutorials && tutorials.length) {?>
+    <div class="tutorials">
+        <h4>Tutorial<?js= (tutorials.length > 1 )? 's':'' ?></h4>
+        <ul>
+            <?js tutorials.forEach(function(t) { ?>
+                <li><?js= self.tutoriallink(t) ?></li>
+            <?js }); ?>
+        </ul>
+    </div>
+<?js } ?>
+
+
+
+
+
+
+<?js if (data.author && author.length) { ?>
+    <div class="authors">
+        <h4>Author<?js= (author.length > 1) ? 's':'' ?><h4>
+        <?js author.forEach(function(a) { ?>
+            <div class="author"><?js= self.resolveAuthorLinks(a) ?></div>
+        <?js }); ?>
+    </div>    
+<?js } ?>
+
+
+
+
+
+
+<?js if ( data.version || data.since || data.copyright || data.license) { ?>
+    <div class="meta">
+    
+    
+        <?js if ( data.copyright ) { ?>
+            <div class="copyright">
+                © <?js= copyright ?>
+            </div>
+        <?js } ?>
+        
+        
+        <?js if (data.license) { ?>
+            <div class="licence">
+                Licence <?js= license ?>
+            </div>
+        <?js } ?>
+        
+        
+        <?js if (data.version) { ?>
+            <div class="version">
+                Version <?js= version ?>
+            </div>
+        <?js } ?>
+        
+        
+        <?js if (data.since) { ?>
+            <div class="since">
+                Since <?js= since ?>
+            </div>
+        <?js } ?>
+        
+        
+    </div>
+<?js } ?>
+
+
+

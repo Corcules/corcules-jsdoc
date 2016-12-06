@@ -1,0 +1,19 @@
+
+<h2><?js= header ?></h2>
+
+
+<?js if (children.length > 0) { ?>
+    <ul>
+        
+        <?js var self = this; ?>
+        
+        <?js children.forEach(function(t) { ?>
+            <li><?js= self.tutoriallink(t.name) ?></li>
+        <?js }); ?>
+        
+    </ul>
+<?js } ?>
+
+<div class="content">
+    <?js= content ?>
+</div>

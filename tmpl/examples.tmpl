@@ -1,0 +1,22 @@
+<?js
+var examples = obj;
+var self = this;
+?>
+
+<h4>Example<?js= examples.length > 1? 's':'' ?></h4>
+    <div class="examples">
+
+    <?js examples.forEach(function(example) { ?>
+        
+        <div class="example">
+        
+            <?js if (example.caption) { ?>
+                <div class="caption"><?js= example.caption ?></div>
+            <?js } ?>
+        
+            <pre class="prettyprint"><code><?js= self.htmlsafe(example.code) ?></code></pre>
+            
+        </div>
+    
+    <?js }); ?>
+</div>
