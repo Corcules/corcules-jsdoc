@@ -1,0 +1,502 @@
+#content {
+    position:relative;
+    z-index:0;
+    padding:30px;
+    
+    h1  {
+        font-size: 1.9em;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+    }
+    h3 { 
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    h5 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    h6 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    h2:empty {
+        display: none;
+    }
+    
+    
+    .container {
+        
+        border-bottom: 1px solid #666;
+        padding:20px 0;
+        
+        .header {
+            margin-bottom: 30px;
+            .class-description {
+                 margin-bottom: 20px;
+                 &:last-child {
+                     margin-bottom:0;
+                 }
+            }
+        }
+        
+        .overview {
+            margin-bottom: 30px;
+            .description {
+                margin-bottom: 20px;
+            }
+        }
+        
+        
+        
+        .extend {
+        
+        }
+        
+        .requires {
+            
+        }
+        
+        .classes {
+            margin-bottom: 20px;
+            .class {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                &:last-child {
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                }
+                .name {
+                    margin-bottom:5px;
+                    a {
+                        color:inherit;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .summary {
+                    padding-left:10px;
+                    font-size:0.8em;
+                }
+            }
+        }
+        
+        .mixins {
+            margin-bottom: 20px;
+            .mixin {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                &:last-child {
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                }
+                .name {
+                    margin-bottom:5px;
+                    a {
+                        color:inherit;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .summary {
+                    padding-left:10px;
+                    font-size:0.8em;
+                }
+            }
+        }
+        
+        
+        .namespaces {
+            margin-bottom: 20px;
+            .namespace {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                &:last-child {
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                }
+                .name {
+                    margin-bottom:5px;
+                    a {
+                        color:inherit;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .summary {
+                    padding-left:10px;
+                    font-size:0.8em;
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    // se positionne avant le doclet en haut de page
+    
+    
+    
+    .doclet {
+        position: relative;
+         border-bottom: 1px solid #ddd;
+         padding:20px 0 ;
+         
+         .signature { 
+             color:#bbb;
+             font-weight: normal;
+             font-size: 0.8em;
+             &:before {
+                 display: inline-block;
+                 content:"\21E5";
+                 vertical-align: middle;
+                 margin: 0 5px;
+                 color:#1dcf09;
+                 
+             }
+         }
+         .return-type {
+             color:#bbb;
+             font-weight: normal;
+             font-size: 0.8em;
+             &:before {
+                 display: inline-block;
+                 content:"\21E5";
+                 vertical-align: middle;
+                 margin: 0 5px;
+                 color:#0970cf;
+             }
+             &:empty {
+                 display:none;
+             }
+         }
+         
+         
+         
+         .location {
+             //display: inline-block;
+             font-size: 0.7em; 
+             color:#666;
+             margin-top:-10px;
+             margin-bottom: 20px;
+             
+             &:before {
+                 display: inline-block;
+                 
+                 content:"\25CE";
+                 font-size: 1.2em;
+                 vertical-align: middle;
+             }
+             a {
+                 color:inherit;
+                 text-decoration: none;
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+         }
+         
+         .deprecated {
+             display: inline-block;
+             font-size: 0.6em;
+             background: #ff9d02;
+             padding: 2px 7px;
+             border-radius: 20px;
+             margin-bottom: 20px;
+             color:#fff;
+         }
+         
+         
+         .summary {
+             margin-bottom: 20px;
+         }
+         
+         .todo {
+             padding: 15px;
+             border:1px solid #f99696;
+             margin-bottom: 20px;
+             background: #fafafa;
+             font-size: 0.8em;
+             
+             b {
+                 color: #f04242; 
+             }
+             
+         }
+         
+         
+         .properties {
+             margin-bottom: 20px;
+             table {
+                width: 100%;
+                th, td {
+                    padding:5px;
+                    border-collapse: collapse;
+                    border:1px solid #ddd;
+                    font-size: 0.8em;
+                }
+                th {
+                    text-align: left;
+                    background: #f6f6f6;
+                }
+                td {
+                    vertical-align: top;
+                }
+                td.name, td.type {
+                    width:20%;
+                }
+             }
+         }
+         
+         
+         .params {
+             margin-bottom: 20px;
+             table {
+                width: 100%;
+                th, td {
+                    padding:5px;
+                    border-collapse: collapse;
+                    border:1px solid #ddd;
+                    font-size: 0.8em;
+                }
+                th {
+                    text-align: left;
+                    background: #f6f6f6;
+                }
+                td {
+                    vertical-align: top;
+                }
+                td.name, td.type, td.attributes, td.default {
+                    width:10%;
+                }
+         
+
+             }
+         }
+         
+         
+         .return {
+             margin-bottom: 20px;
+             table {
+                width: 100%;
+                td {
+                    padding:5px;
+                    border-collapse: collapse;
+                    border:1px solid #ddd;
+                    font-size: 0.8em;
+                }
+                td.type {
+                    width:10%;
+                }
+             }
+         }
+         
+         
+         
+         .description {
+             font-size: 0.9em;
+             margin-bottom: 20px;
+             padding:10px 0;
+         }
+         
+         
+         
+         .examples {
+            
+            .example {
+                margin-bottom: 20px;            
+                .caption {
+                    font-size: 0.8em;
+                    margin-bottom: 5px;
+                }
+                pre {
+                    padding: 15px;
+                    border:1px solid #eaeaea ; 
+                    background: #fcfcfc; 
+                }
+            }
+            
+         }
+         
+         .notes {
+             font-size: 0.8em;
+             margin-bottom: 20px;
+             border:1px solid #ffd900;
+             padding:10px;
+             background: #ffffee;
+         }
+      
+      
+         .see {
+             margin-bottom: 20px;
+             ul {
+                 font-size: 0.8em;
+                 color:#666;
+                 list-style: none;
+                 li {
+                     margin-bottom: 3px;
+                     a {
+                         color:inherit;
+                         text-decoration: none;
+                         &:before {
+                             display: inline-block;
+                             content:"\261E";
+                             margin-right: 5px;
+                             vertical-align: middle;
+                             font-size: 1.4em;
+                         }
+                         &:hover {
+                             text-decoration: underline;
+                         }
+                     }
+                 }
+             }
+         }
+         
+         .tutorials {
+             margin-bottom: 20px;
+             ul {
+                 font-size: 0.8em;
+                 color:#666;
+                 list-style: none;
+                 li {
+                     margin-bottom: 3px;
+                     a {
+                         color:inherit;
+                         text-decoration: none;
+                         &:before {
+                             display: inline-block;
+                             content:"\261E";
+                             content:"\21AA";
+                             content:"\21B3";
+                             content:"\2318";
+                             margin-right: 5px;
+                             vertical-align: middle;
+                             font-size: 1em;
+                         }
+                         &:hover {
+                             text-decoration: underline;
+                         }
+                     }
+                 }
+             }
+         }
+
+         
+         
+         .using {
+             margin-bottom: 20px;
+             a { 
+                 font-size: 0.8em;
+                 color:#666;
+                 padding:0 2px;
+                 text-decoration: none;
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+         }
+         .usedby {
+             margin-bottom: 20px;
+             a { 
+                 font-size: 0.8em;
+                 color:#666;
+                 padding:0 2px;
+                 text-decoration: none;
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+         }
+      
+      
+      
+         .authors {
+             h4, .author { 
+                 display:inline-block;
+             }
+             h4 { 
+                margin-right: 10px; 
+             }
+        
+         }
+      
+      
+         .copyright, .licence, .version, .since {
+             display: block;
+             font-size: 0.65em;
+             padding:0 15px;
+             width:25%;
+             float:left;
+             color:#999;
+             //text-align: center;
+         }
+         .meta {
+             > div {
+                 &:first-child {
+                     padding-left:0;
+                 }
+             }
+             &:after {
+                 display:block;
+                 content:"";
+                 clear:both;
+             }
+         }
+         
+         
+         
+         
+         /*
+             pour valeur par défaut d'un member (genre variable) 
+             dont le contenu serait un tableau ou un object
+             Dans ce cas, la valeur par défaut est formaté en code
+         */
+         
+         .defaultvalue {
+             margin-bottom: 20px;
+             pre {
+                 background:#fff;
+             }
+         }
+         
+         
+         div:last-child {
+             margin-bottom: 0;
+         }
+         
+    }
+    
+    
+    section {
+        padding:25px 0 20px;
+        border-bottom: 1px solid #666;
+        article:last-child  {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    
+}
